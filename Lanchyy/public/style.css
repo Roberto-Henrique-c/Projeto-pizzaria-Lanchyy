@@ -1,0 +1,365 @@
+:root {
+  --vermelho: #c1121f;
+  --vermelho-escuro: #8c0f15;
+  --vermelho-principal: #c1121f;
+  --verde: #2d6a4f;
+  --verde-claro: #52b788;
+  --verde-principal: #2d6a4f;
+  --branco: #ffffff;
+  --cinza: #f5f5f5;
+  --cinza-escuro: #333333;
+  --sombra: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --radius: 10px;
+  --padding: 20px;
+}
+
+/* RESET PRÉ CETADOS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--cinza);
+  color: var(--cinza-escuro);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(to right, var(--vermelho), var(--verde));
+  padding: 5px 20px;
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-navbar {
+  height: 150px;
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffe66d;
+}
+
+/* CONTAINERS */
+main, #container {
+  max-width: 1200px;
+  margin: auto;
+  padding: var(--padding);
+  background-color: var(--branco);
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+  margin-top: 30px;
+}
+
+/* TODOS OS TÍTULOS */
+h1, h2, h3 {
+  color: var(--vermelho);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* SEÇÕES PARA O GRID */
+.pai, .opcoes-pizza {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* CARD */
+.card {
+  background-color: var(--branco);
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+  width: 280px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: var(--verde);
+  margin: 10px 0;
+}
+
+.card-subtitle {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* TODOS OS BOTÕES */
+.btn-ver,
+.btn-adicionar {
+  display: inline-block;
+  background-color: var(--vermelho);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: var(--radius);
+  font-weight: bold;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.btn-ver:hover,
+.btn-adicionar:hover {
+  background-color: var(--vermelho-escuro);
+}
+
+/* TODOS OS FORMULÁRIOS */
+.elemento-pai {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--branco);
+  padding: var(--padding);
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.elemento-pai input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid var(--verde-claro);
+  border-radius: var(--radius);
+  margin: 5px;
+}
+
+.elemento-pai button,
+.button-login {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: var(--radius);
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.elemento-pai button:hover,
+.button-login:hover {
+  background-color: var(--vermelho-escuro);
+}
+
+.login-link {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: var(--verde);
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* CARRINHO */
+#carrinho {
+  background-color: var(--verde-claro);
+  color: white;
+  padding: 20px;
+  border-radius: var(--radius);
+  max-width: 400px;
+  margin: 30px auto;
+  box-shadow: var(--sombra);
+}
+
+#carrinho ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#carrinho li {
+  background: var(--branco);
+  color: var(--vermelho);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#total {
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--vermelho);
+}
+
+#carrinho button {
+  background: linear-gradient(to right, var(--vermelho), var(--vermelho-escuro));
+  border: black solid 1px;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border-radius: var(--radius);
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#carrinho button:hover {
+  background: linear-gradient(to right, var(--vermelho-escuro), var(--vermelho));
+}
+
+/* PAGAMENTO */
+label {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+  accent-color: var(--verde);
+}
+
+.cartao, #pix-info {
+  width: 300px;
+  background-color: var(--cinza);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+  margin-top: 20px;
+}
+
+.pagamento input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+.pagamento button, #pix-info button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, var(--verde), var(--verde-claro));
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.pagamento button:hover, #pix-info button:hover {
+  background: linear-gradient(to right, var(--verde-claro), var(--verde));
+}
+
+#valor-pix {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer, .foote {
+  background-color: var(--verde);
+  color: var(--branco);
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .pai, .opcoes-pizza {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 95%;
+  }
+
+  .elemento-pai {
+    width: 95%;
+  }
+
+  main, #container {
+    padding: 15px;
+  }
+
+  #carrinho {
+    width: 95%;
+  }
+}

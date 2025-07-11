@@ -1,0 +1,22 @@
+<%- include('header'); %>
+
+  <main>
+    <section class="elemento-pai">
+
+      <h2>Login do Cliente</h2>
+
+      <form id="form-login" method="POST" action="#">
+
+        <input type="email" name="email" placeholder="Digite seu E-mail" required>
+        <input type="password" name="senha" placeholder="Digite sua Senha" required>
+
+        <button type="submit" class="button-login">Entrar</button>
+
+        <p class="login-link">Ainda não tem cadastro? <a href="cadastro">Cadastre-se</a></p>
+
+      </form>
+
+    </section>
+  </main>
+  
+  <%- include('footer'); %>

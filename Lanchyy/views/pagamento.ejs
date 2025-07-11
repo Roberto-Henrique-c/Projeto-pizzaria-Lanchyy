@@ -1,0 +1,38 @@
+<%- include('header'); %>
+
+  <main>
+    <h2>Forma de pagamento</h2>
+
+    <label>
+      <input type="radio" name="pagamento" value="cartao" onclick="mostrarCartao()"> Cartão
+    </label>
+
+    <label>
+      <input type="radio" name="pagamento" value="pix" onclick="mostrarPix()"> Pix
+    </label>
+
+    <div id="cartao-info" class="cartao" style="display: none;">
+      <p>Cartão de crédito:</p>
+       <img src="<%= pagamentos[0] %>" alt="kjksjk">
+
+      <div class="pagamento">
+        <input type="text" placeholder="Número do cartão">
+        <input type="text" placeholder="Nome no cartão">
+        <input type="text" placeholder="MM/AA">
+        <input type="text" placeholder="Código de segurança">
+        <button onclick="alert('Pagamento com cartão processado!')">Efetuar pagamento</button>
+      </div>
+    </div>
+
+    <div id="pix-info" style="display: none;">
+      <p>Escaneie o QR Code com seu banco:</p>
+      <img id="qr-pix" src="" alt="QR Code Pix" width="200" height="200">
+      <p id="valor-pix">Total: R$ 59,90</p>
+      <button onclick="confirmarPagamento()">Confirmar pagamento</button>
+    </div>
+
+  </main>
+
+
+  
+  <%- include('footer'); %>
